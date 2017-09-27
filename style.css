@@ -105,11 +105,13 @@ text-align:center;
 background-color:#0E0679;}
 
 #menu {position: fixed;
-display:none;
 height:35px;
+letter-spacing: .1em;
+font-size:14px;
 padding-top:15px;
-background-color:#0E0679;
 width:100%;
+max-width: 1600px;
+margin:auto;
 top:0px;
 z-index: 10;}
 
@@ -232,7 +234,8 @@ margin-bottom:125px;
 overflow: hidden;}
 
 #map {height:400px;
-border:1px dotted #F72B50;}
+border:1px dotted #F72B50;
+padding:10px;}
 
 .live_review {width:85%;
 max-width: 1200px;
