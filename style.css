@@ -56,12 +56,12 @@ color:#fff;}
 
 #container {width: 100%;
 font-family: 'Work Sans', sans-serif;
-margin-top:700px;
+margin-top:800px;
 background-color:#0E0679;}
 
 #banner {background-image: url(images/toms-restaurant-blur.jpg);
 background-size: cover;
-height:850px;
+height:750px;
 background-repeat: none;
 position:fixed;
 width:100%;
@@ -360,6 +360,11 @@ height:200px;}
 
 @media screen 
   and (max-width: 1400px) { 
+
+  	#container {width: 100%;
+font-family: 'Work Sans', sans-serif;
+margin-top:700px;
+background-color:#0E0679;}
 
 #banner {background-image: url(images/toms-restaurant-blur.jpg);
 background-size: cover;
