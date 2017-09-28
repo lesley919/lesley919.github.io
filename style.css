@@ -108,17 +108,45 @@ background-color:#0E0679;}
 height:35px;
 letter-spacing: .1em;
 font-size:14px;
-padding-top:15px;
 width:100%;
 margin:auto;
 top:0px;
 z-index: 10;}
 
-a {color:#fff;}
-
-#mp_menu li {float:right;
+#mp_menu {float:right;
 margin-right:15px;
-width:auto;}
+color:#fff;
+text-decoration: none;
+padding:10px;
+width:100px;
+text-align: center;
+display:block;
+background-color:#0E0679;
+margin-top: -1px;
+border-bottom:1px dotted #F72B50;
+border-left:1px dotted #F72B50;
+border-right:1px dotted #F72B50;}
+
+#sub_menu {width: 100%;
+background-color:#0E0679;
+height:30px;
+padding-top:20px;
+top:0;
+z-index: 9;
+padding-left:3%;
+border-bottom:1px dotted #F72B50;
+display:none;}
+
+a.sub_menu {color:rgba(255,255,255,.4);
+letter-spacing: .1em;
+text-decoration:none;
+float:left;
+display:inline;
+border:0px;
+margin-right:30px;}
+
+a.sub_menu:hover {color:rgba(255,255,255,1);
+}
 
 .title_text_underlay {font-size:100px;
 position:relative;
@@ -156,7 +184,6 @@ letter-spacing: .01em;}
 max-width: 1200px;
 padding-top: 100px;
 margin:auto;
-padding-top:50px;
 margin-bottom:125px;
 overflow: hidden;}
 
@@ -172,7 +199,7 @@ color:#F72B50;
 padding-bottom: 35px;
 letter-spacing: .1em;}
 
-.rez_input {width:100%;
+.rez_input {width:98.75%;
 margin:auto;
 -webkit-appearance: none;
 background-color:rgba(255,255,255,0);
@@ -180,17 +207,71 @@ border:0px;
 padding:0px;
 height:35px;
 font-size:14px;
-margin-bottom:20px;
+margin-bottom:10px;
 color:#fff;
 border:1px dotted #F72B50;
 font-family: 'Work Sans', sans-serif;
 letter-spacing: .1em;}
 
-input[type="text"]::-webkit-input-placeholder {color:rgba(255,255,255,1);
-padding-left: 5px;
+p.name {margin-bottom:30px;
+font-size: 13px;
+color:#F72B50;
+font-weight:400;}
+
+p.date {margin-bottom:30px;
+font-size: 13px;	
+color:#F72B50;
+font-weight:400;}
+
+input[type="text"]::-webkit-input-placeholder {color:rgba(255,255,255,.4);
 letter-spacing: .1em;}
 
-input[type="text"]:active {border:none;}
+input[type="text"] {padding-left: 5px;
+letter-spacing: .1em;}
+
+#ui-datepicker-div {
+background-color:#0E0679;
+padding:10px;
+font-family: 'Work Sans', sans-serif;
+font-size: 13px;
+text-align: center;}
+
+.ui-datepicker-header {padding-bottom:10px;}
+
+.ui-datepicker-calendar {width:300px;
+background-color:#0E0679;
+font-family: 'Work Sans', sans-serif;
+font-size: 13px;
+text-align: center;
+}
+
+.ui-datepicker-calendar td {padding:5px;
+border:1px dotted #F72B50;}
+
+
+.ui-datepicker-calendar a {text-decoration: none;
+color:#fff;}
+
+.ui-state-default, .ui-widget-content .ui-state-default {border:0px;
+background-color:#0E0679;
+color:#fff;}
+
+.ui-widget-header {border:0px;
+color:#fff;
+background-color:#0E0679;
+font-family: 'Work Sans', sans-serif;
+font-weight:400;}
+
+.ui-widget.ui-widget-content {border:0px;}
+
+.ui-datepicker th {color:#fff;
+font-weight: 400;}
+
+.ui-datepicker-next span:after {content:"<";}
+
+input:focus {outline:none;}
+
+button:focus {outline:none;}
 
 button {width:100%;
 position: relative;
@@ -203,38 +284,49 @@ background-color:rgba(247,43,80,.7);
 color:#fff;
 font-size:14px;
 letter-spacing: .1em;
-font-family: 'Work Sans', sans-serif;}
+font-family: 'Work Sans', sans-serif;
+transition: all 0.1s ease-in-out;}
 
-table {width:100%;
+.btn_hover {background-color:rgba(247,43,80,1);
+transition: all 0.1s ease-in-out;}
+
+#existing {width:100%;
 margin:auto;
 font-size: 14px;
 text-align: center;
 color:#Fff;}
 
-tr {border-top:1px dotted #F72B50;
+#existing tr {border-top:1px dotted #F72B50;
 border-bottom:1px dotted #F72B50;
 text-align:center;
 height:35px;
 line-height: 35px;}
 
-td {width:50%;}
+#existing td {width:50%;}
 
 .right {border-left:1px dotted #F72B50;}
 
-th {width:50%;
+#existing th {width:50%;
 letter-spacing: .1em;}
 
 #location {clear:left;
 width:85%;
 max-width: 1200px;
 margin:auto;
-margin-top:50px;
+padding-top:100px;
 margin-bottom:125px;
 overflow: hidden;}
 
 #map {height:400px;
 border:1px dotted #F72B50;
 padding:10px;}
+
+#reviews {width:85%;
+max-width: 1200px;
+padding-top: 100px;
+margin:auto;
+margin-bottom:125px;
+overflow: hidden;}
 
 .live_review {width:85%;
 max-width: 1200px;
