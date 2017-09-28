@@ -1,3 +1,8 @@
+$(window).on('load', function(){
+  $('#banner').fadeIn(500);
+  //$('#banner_text_container').fadeIn();
+});
+
 
 //drop-down menu
 $('#mp_menu').on('click', function(e){

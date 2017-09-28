@@ -63,7 +63,8 @@ background-repeat: none;
 position:fixed;
 width:100%;
 z-index: -10;
-top:0;}
+top:0;
+display:none;}
 
 #lines {position:absolute;
 z-index: 10;
@@ -92,6 +93,8 @@ width:10px;
 height:350px;
 border-left:1px dotted #F72B50;
 border-right:1px dotted #F72B50;}
+
+/*#banner_text_container {display:none;}*/
 
 #banner_text {position: absolute;
 z-index: 10;
@@ -267,7 +270,16 @@ font-weight:400;}
 .ui-datepicker th {color:#fff;
 font-weight: 400;}
 
-.ui-datepicker-next span:after {content:"<";}
+.ui-icon-circle-triangle-w {background-position: 0px 0px}
+
+.ui-icon-circle-triangle-e {background-position: 0px 0px}
+
+.ui-datepicker .ui-datepicker-prev span {background-image: url(images/ui_prev-01.png);}
+
+.ui-datepicker .ui-datepicker-next span {background-image: url(images/ui_next-01.png);}
+
+.ui-widget-header .ui-state-hover {background-color:rgba(0,0,0,0);
+border:1px solid rgba(0,0,0,0)}
 
 input:focus {outline:none;}
 
