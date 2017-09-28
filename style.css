@@ -66,33 +66,6 @@ z-index: -10;
 top:0;
 display:none;}
 
-#lines {position:absolute;
-z-index: 10;
-width:650px;
-top:0;
-left:0;
-right:0;
-margin:auto;
-}
-
-#lines_1 {position: absolute;
-z-index: 10;
-top:0;
-margin-left:15%;
-width:10px;
-height:350px;
-border-left:1px dotted #F72B50;
-border-right:1px dotted #F72B50;}
-
-#lines_2 {position: absolute;
-z-index: 10;
-top:0;
-margin-left:85%;
-margin-top:350px;
-width:10px;
-height:350px;
-border-left:1px dotted #F72B50;
-border-right:1px dotted #F72B50;}
 
 /*#banner_text_container {display:none;}*/
 
@@ -384,3 +357,29 @@ text-align: right;}
 #footer {width:100%;
 clear:both;
 height:200px;}
+
+@media screen 
+  and (max-width: 2600px) { 
+
+  	#banner {background-image: url(images/toms-restaurant-blur.jpg);
+background-size: cover;
+height:750px;
+background-repeat: none;
+position:fixed;
+width:100%;
+z-index: -10;
+top:0;
+display:none;}
+
+#banner_text {position: absolute;
+z-index: 10;
+width:650px;
+top:300px;
+left:0;
+right:0;
+margin:auto;
+padding:20px 20px 12px 20px;
+text-align:center;
+background-color:#0E0679;}
+
+}
