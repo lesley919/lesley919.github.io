@@ -6,12 +6,14 @@
 <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,300,400,500,700,900" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Coustard" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+<script src="https://use.fontawesome.com/6ff0d2385c.js"></script>
 <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 
 <div id="container">
+<!-- Success Modal -->
     <div id="modal">
     <div id="modal_content">
     <p class="success">Reservation Success! We look forward to your visit.</p>
@@ -19,10 +21,15 @@
     <button id="reminder">SEE YOU SOON</button>
 	</div>
 	</div>
-<!--<div id="lines">
-<div id="lines_1"></div>
-<div id="lines_2"></div>
-</div>-->
+<!-- Delete Modal -->
+	<div id="delete_modal">
+    <div id="modal_content">
+    <p class="success">Are you sure you want to cancel your reservation?</p>
+    <button id="yes">YES!</button>
+    <button id="no">NOPE</button>
+	</div>
+	</div>
+
 <div id="banner"></div>
 <div id="banner_text_container">
 	<div id="banner_text">
@@ -63,6 +70,8 @@
 		<th class="right">DATE</th>
 		</thead>
 		<tbody>
+			<tr>
+			</tr>
 		</tbody>
 	</table>
 	</div>
@@ -112,7 +121,7 @@
  		<script id="rez-template" type="text/x-handlebars-template">
 			<tr data-id="{{reservationId}}">
 				<td>{{name}}</td>
-				<td class="right">{{date}}</td>
+				<td class="right">{{date}}<a href="#" class="trash"><i class="fa fa-trash-o delete"></i></a></td>
 			</tr>
 		</script>
 			<!-- end handlebar template -->

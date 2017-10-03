@@ -89,7 +89,7 @@ $('#date').val('');
 
 // post new rez to database
   rezReference.push(rezData);
-$('#modal').delay(1000).fadeIn();
+$('#modal').delay(600).fadeIn();
 //$('#modal').delay(3000).fadeOut();
 }
 });
@@ -105,7 +105,7 @@ for (var reservation in allReservations) {
   var rezInfo = {
     name: allReservations[reservation].name,
     date: allReservations[reservation].date,
-    //reservationId: reservation
+    reservationId: reservation
   };
 
 //handlebars template
@@ -125,6 +125,22 @@ for (var i in reservations) {
 }
 
 getReservations();
+
+// delete rez - remember this is an example of event delegation!
+
+$('tbody').on('click', '.trash', function(e) {
+  e.preventDefault();
+$('#delete_modal').fadeIn();
+$("#yes").on('click', function(e){
+  $('#delete_modal').fadeOut();
+ // $(this).find('tr').remove();
+});
+$("#no").on('click', function(e){
+  $('#delete_modal').fadeOut();
+ // $(this).find("#" + '{{reservationId}}').remove();
+});
+});
+
 
 // reminder button 
 
