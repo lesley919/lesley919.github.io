@@ -413,13 +413,13 @@ border-bottom:1px dotted #F72B50;}
 .review_img {float:left;
 padding-top:20px;
 padding-left: 20px;
-width:15%;
-margin-right:5%;}
+width:13%;
+margin-right:2%;}
 
-.reviewer {width:80%;}
+.reviewer {width:100%;}
 
 .review_txt {float:left;
-width:70%;}
+width:80%;}
 
 .quote {color:#F72B50;
 font-size: 130px;
