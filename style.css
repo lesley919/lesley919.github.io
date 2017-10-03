@@ -80,37 +80,6 @@ padding:20px 20px 12px 20px;
 text-align:center;
 /*background-color:#0E0679;*/}
 
-@media screen 
-  and (max-width: 1400px) { 
-
-  	#container {width: 100%;
-font-family: 'Work Sans', sans-serif;
-margin-top:700px;
-background-color:#0E0679;}
-
-#banner {background-image: url(images/toms-restaurant-blur.jpg);
-background-size: cover;
-height:600px;
-background-repeat: none;
-position:fixed;
-width:100%;
-z-index: -10;
-top:0;
-display:none;}
-
-#banner_text {position: absolute;
-z-index: 10;
-width:1000px;
-top:200px;
-left:0;
-right:0;
-margin:auto;
-padding:20px 20px 12px 20px;
-text-align:center;
-/*background-color:#0E0679;*/}
-
-}
-
 #menu {position: fixed;
 height:35px;
 letter-spacing: .1em;
@@ -151,13 +120,13 @@ float:left;
 display:inline;
 border:0px;
 margin-right:30px;}
-
+	
 a.sub_menu:hover {color:rgba(255,255,255,1);}
 
-.title_text {font-size:150px;
+.title_text {font-size:170px;
 font-family: 'Permanent Marker', cursive;
 /*font-weight:700;*/	
-color:rgba(255,255,255);
+color:#fff;
 line-height: 0.4em;
 /*border:1px solid #F72B50;*/
 padding:20px;}
@@ -473,5 +442,43 @@ color:rgba(255,255,255,.8);
 font-weight:300;
 letter-spacing: .1em;}
 
+@media screen 
+  and (max-width: 1400px) { 
+
+  	#container {width: 100%;
+font-family: 'Work Sans', sans-serif;
+margin-top:700px;
+background-color:#0E0679;}
+
+#banner {background-image: url(images/toms-restaurant-blur.jpg);
+background-size: cover;
+height:600px;
+background-repeat: none;
+position:fixed;
+width:100%;
+z-index: -10;
+top:0;
+display:none;}
+
+#banner_text {position: absolute;
+z-index: 10;
+width:1000px;
+top:200px;
+left:0;
+right:0;
+margin:auto;
+padding:20px 20px 12px 20px;
+text-align:center;
+/*background-color:#0E0679;*/}
+
+.title_text {font-size:150px;
+font-family: 'Permanent Marker', cursive;
+/*font-weight:700;*/	
+color:#fff;
+line-height: 0.4em;
+/*border:1px solid #F72B50;*/
+padding:20px;}
+
+}
 
 
