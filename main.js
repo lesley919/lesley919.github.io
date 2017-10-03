@@ -153,27 +153,29 @@ $('#reminder').on('click', function(){
 
 var dates = [1,2,3,4,5,6,7];
 var n;
+var t;
 //var dateId = $('#weekdays').children().attr('id');
 
 function dayOpen() {
   var d = new Date();
   var n = d.getDay();
   var t = d.getHours();
-  //console.log(t);
+  console.log(t);
+  console.log(n);
  
 // see if date matches the id of one of the p tags
 
 for (var i = 0; i < dates.length; i++) {
-  if (n === dates[i] && (8 >= t <= 17)){
+  if (n === dates[i]) {
     $('#' + dates[i]).addClass('pink');
-    $('.open_txt').text("OPEN :)");
+  }
+}
+  if (t >= 8 && t <=17) {
+    $('.open_txt').text("OPEN :)").addClass('pink');
   } else {
     $('.open_txt').text("CLOSED :(").addClass('pink');
   }
-}
-
 };
-
 dayOpen();
 
 function initMap() {
