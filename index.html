@@ -5,11 +5,20 @@
 <title>Lesley's Demo Site</title>
 <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,300,400,500,700,900" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Coustard" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
 <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+
 <div id="container">
+    <div id="modal">
+    <div id="modal_content">
+    <p class="success">Reservation Success! We look forward to your visit.</p>
+    <p class="success"> Click the button below to send yourself a text confirmation.</p>
+    <button id="reminder">SEE YOU SOON</button>
+	</div>
+	</div>
 <!--<div id="lines">
 <div id="lines_1"></div>
 <div id="lines_2"></div>
@@ -18,7 +27,9 @@
 <div id="banner_text_container">
 	<div id="banner_text">
 	<p class="title_text">Monk's Cafe</p>
+	<div id="sub_bg">
 	<p class="sub_title_text">THE COFFEE SHOP</p>
+	</div>
 	</div>
 </div>
 <div id="menu">
@@ -26,7 +37,7 @@
 	<a class="sub_menu" href="index.html#rez"><li>RESERVE A SPOT</li></a>
 	<a class="sub_menu" href="index.html#loc"><li>LOCATION</li></a>
 	<a class="sub_menu" href="index.html#rev"><li>REVIEWS</li></a>
-	<!--<a class="sub_menu" href="#"><li>API</li></a>-->
+	<a class="sub_menu" href="index.html#insta"><li>#MONKYLOVE</li></a>
 </ul>
 <a id="mp_menu" href="#">MENU</a>
 </div>
@@ -35,12 +46,13 @@
 <p class="sub_section_title">Reservations</p>
 	<div id="make_rez">
 	<p class="sm_label">MAKE A RESERVATION</p>
-	<form>
+	<form id="rezform">
     <input id="name" class="rez_input" type="text" placeholder="Name">
     <p class="name"></p>
-    <input id="date" class="rez_input date" type="text" placeholder="Date">
+   <input id="date" class="rez_input date" type="text" placeholder="Date">
     <p class="date"></p>
     <button id="submit">CONFIRM</button>
+
 	</form>
 	</div>
 	<div id="existing_rez">
@@ -51,14 +63,6 @@
 		<th class="right">DATE</th>
 		</thead>
 		<tbody>
-		<!-- start handlebar template -->
- 		<script id="reservation-template" type="text/x-handlebars-template">
-			<tr>
-				<td>{{name}}</td>
-				<td class="right">{{date}}</td>
-			</tr>
-		</script>
-			<!-- end handlebar template -->
 		</tbody>
 	</table>
 	</div>
@@ -67,6 +71,19 @@
 <div id="location">
 <p class="sub_section_title">Come Dine with Us</p>
 <div id="map"></div>
+<div id="hours">
+<p class="sm_label_hrs">HOURS OF OPERATION</p>
+<div id="weekdays">
+<p class="sm_label_now">RIGHT NOW WE ARE:<span class="open_txt"></p> 
+<p id="1" class="sm_label_date">MONDAY 8A - 5P
+<p id="2" class="sm_label_date">TUESDAY 8A - 5P</p>
+<p id="3" class="sm_label_date">WEDNESDAY 8A - 5P</p>
+<p id="4" class="sm_label_date">THURSDAY 8A - 5P</p>
+<p id="5" class="sm_label_date">FRIDAY 8A - 5P</p>
+<p id="6" class="sm_label_date">SATURDAY 8A - 5P</p>
+<p id="7" class="sm_label_date">SUNDAY 8A - 5P</p>
+</div>
+</div>
 </div>
 <div id="rev"></div>
 <div id="reviews">
@@ -83,17 +100,32 @@
 	</div>
 	</div>
 </div>
-<div id="footer">
-
+<div id="insta"></div>
+<div id="instafeed">
+<p class="sub_section_title">#MonkyLove</p>
 </div>
-  <!-- Firebase -->
+<div id="footer">
+<p class="footer_txt">	&copy; 2017 MONKS CAFE</p>
+</div>
+
+			<!-- start handlebar template -->
+ 		<script id="rez-template" type="text/x-handlebars-template">
+			<tr data-id="{{reservationId}}">
+				<td>{{name}}</td>
+				<td class="right">{{date}}</td>
+			</tr>
+		</script>
+			<!-- end handlebar template -->
+   <!-- Firebase -->
   <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
   <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
+  <!-- Instafeed -->
+  <script type="text/javascript" src="instafeed.min.js"></script>
   <!-- handlebars -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+   <!-- datepicker -->
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <!-- custom js -->
   <script src="main.js"></script>
 <!-- google maps -->
